@@ -15,7 +15,8 @@
                             <router-link :to="{ name: 'dashboard' }" class="nav-link"
                                 :class="{ active: isActive('dashboard') }">Dashboard</router-link>
                         </li>
-                        <li class="nav-item">
+
+                        <li class="nav-item" v-if="user.role == 'admin'">
                             <router-link :to="{ name: 'user-list' }" class="nav-link"
                                 :class="{ active: isActive('user-list') }">User List</router-link>
                         </li>
@@ -51,9 +52,10 @@
 import { mapActions } from 'vuex'
 export default {
     name: "app-layout",
-    computed: {
-        currentPage() {
-            return this.$route.name;
+    data() {
+       
+        return {
+            user: this.$store.state.auth.user
         }
     },
     methods: {
