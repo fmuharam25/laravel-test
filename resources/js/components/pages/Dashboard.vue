@@ -7,7 +7,7 @@
                         <h3>Dashboard</h3>
                     </div>
                     <div class="card-body">
-                        <p class="mb-0 text-capitalize">Welcomde <b>{{user.username}}</b></p>
+                        <p class="mb-0 text-capitalize">Welcome <b>{{user.username}}</b></p>
                     </div>
                 </div>
             </div>
