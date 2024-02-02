@@ -10,6 +10,7 @@
                         <p class="mb-0 text-capitalize">Welcome <b>{{ user.username }}</b></p>
                         <p class="mb-0 text-capitalize">Status : {{ user.is_subscribe }}</p>
                         <a class="btn btn-sm text-capitalize" href="#"
+                            v-if="user.role == 'guest'"
                             :class="{ 'btn-warning': user.is_subscribe == 'subscribed', 'btn-primary': user.is_subscribe == 'unsubscribe' }"
                             @click="toggleSubscribe(user.id, user.is_subscribe)">{{ user.is_subscribe
                                 == 'subscribed' ? 'Click To Unsubscribe' : 'Click To Subscribe' }}</a>
