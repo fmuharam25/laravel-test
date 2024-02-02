@@ -14,13 +14,13 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'username' => 'Administrator',
+            'username' => 'admin',
             'name' => 'Administrator',
             'email' => 'admin@growmodo.com',
             'phone' => '123456789',
             'password' => Hash::make('password'),
             'role' => 'admin',
-            'subscription' => 'subscribed'
+            'is_subscribe' => 'subscribed'
         ]);
 
     }
